@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <title>乐子生成器</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 30px auto;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        #joke {
+            font-size: 18px;
+            margin: 20px 0;
+            min-height: 80px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>每日乐子</h1>
+        <div id="joke">点击下方按钮获取乐子</div>
+        <button onclick="showJoke()">来点乐子</button>
+    </div>
+
+    <script>
+        const jokes = [
+            "韦雅婷是乐子",
+            "傻逼韦雅婷",
+            "你活着干啥",
+            "4️⃣🐎韦雅婷",
+            "杂种可以滚了"
+        ];
+        
+        function showJoke() {
+            const jokeElement = document.getElementById('joke');
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            jokeElement.textContent = jokes[randomIndex];
+        }
+    </script>
+</body>
+</html>
